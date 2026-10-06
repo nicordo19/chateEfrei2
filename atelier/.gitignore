@@ -3,6 +3,7 @@ dist/
 .vercel
 .env
 .env.*
+cahier-personnel.json
 test-results/
 playwright-report/
 coverage/
