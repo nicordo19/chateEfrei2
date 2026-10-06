@@ -2,7 +2,7 @@
 
 // Vos réglages : recopiez ici la limite et les deux mots de votre cahier-personnel.json.
 // Les valeurs écrites ci-dessous sont celles de l'exemple (240, boussole, refuge), pas les vôtres.
-export const LIMITE = 240;
+export const LIMITE = 320;
 
 const MOTS = {
   potagé:
@@ -30,7 +30,7 @@ export function validateMessage(raw) {
   if (value === "") {
     return { ok: false, error: "Le message ne doit pas être vide." };
   }
-  if (value.length > 280) {
+  if (value.length > LIMITE) {
     return {
       ok: false,
       error: `Le message doit contenir ${LIMITE} caractères au maximum.`,
