@@ -1,5 +1,26 @@
 # Cap Web
 
-Ce README est à écrire par votre binôme au round 2, en 3 parties : à quoi sert Cap Web, comment l'installer et le lancer, et les 3 modules de `public/js` avec le rôle de chacun. La fiche est [documenter le projet](../defis/R2-ce-que-voit-l-agent.md).
+Cap Web est une petite application de discussion avec un assistant qui répond selon des règles écrites en JavaScript.
+On peut lui envoyer des commandes comme « salut », « aide » ou « test », ainsi que deux mots personnalisés.
+L'application conserve l'historique de la conversation dans le navigateur.
 
-En attendant, dans ce dossier : `npm start` lance Cap Web sur http://127.0.0.1:3000 (Ctrl+C l'arrête), et `npm test` lance les tests. On ne modifie jamais `tests/contrat/`, `browser/contrat.spec.js` ni `cahier-personnel.json`.
+## Installer et lancer
+
+Il faut Node.js 24.20 ou une version plus récente. Depuis le dossier `atelier`, installez les dépendances, puis démarrez l'application :
+
+```sh
+npm ci
+npm start
+```
+
+Ouvrez http://127.0.0.1:3000 dans le navigateur. Pour arrêter le serveur, faites `Ctrl+C`. Pour lancer les tests, depuis `atelier`, exécutez :
+
+```sh
+npm test
+```
+
+## Modules JavaScript
+
+- `public/js/brain.js` valide les messages et choisit les réponses à partir des règles et des mots personnalisés.
+- `public/js/app.js` relie le formulaire aux fonctions de validation, met à jour l'historique et demande son affichage.
+- `public/js/view.js` construit les lignes de conversation et affiche les messages comme du texte.
