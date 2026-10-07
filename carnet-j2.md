@@ -94,3 +94,9 @@ Membre 2 : Travail solo sur cet exercice ; je valide les tâches individuellemen
 ## J3 · Étape 1 : le troisième mot
 
 Prédiction reconstituée à partir du texte d'origine : après l'ajout d'un troisième mot, « aide » annoncerait encore deux mots, car ce nombre était écrit en dur.
+
+Première mesure Lighthouse : accessibilité 96/100 (le rapport affiché contient aussi Performance 100, Bonnes pratiques 100 et SEO 90).
+
+Mesure avec uniquement la catégorie Accessibilité : 96/100. Alerte présente avant le test : « Background and foreground colors do not have a sufficient contrast ratio. »
+
+Test temporaire sans le label : accessibilité 89/100. Alerte : « Form elements do not have associated labels ». Le label a ensuite été remis dans `atelier/public/index.html`.
