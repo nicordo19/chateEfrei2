@@ -90,3 +90,7 @@ Chacun, une phrase : ce que vous savez faire ce soir et que vous ne saviez pas f
 Membre 1 : J’ai appris à lire un test rouge, à corriger la cause dans le code sans toucher au contrat, et à vérifier la cohérence d’un patch avant de l’accepter.
 
 Membre 2 : Travail solo sur cet exercice ; je valide les tâches individuellement et je vérifie les résultats sans binôme.
+
+## J3 · Étape 1 : le troisième mot
+
+Prédiction reconstituée à partir du texte d'origine : après l'ajout d'un troisième mot, « aide » annoncerait encore deux mots, car ce nombre était écrit en dur.
