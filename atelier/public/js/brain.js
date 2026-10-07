@@ -9,6 +9,8 @@ const MOTS = {
     "Pour débuter un potager, commence par une petite surface et choisis des plantes adaptées à son exposition.",
   arrosage:
     "Vérifie l’humidité de la terre avant d’arroser et adapte la quantité d’eau aux besoins de tes plantes..",
+  serre:
+    "Une serre bien orientée garde la chaleur et protège les plantes pendant les nuits fraîches.",
 };
 
 const liste = Object.keys(MOTS)
@@ -18,8 +20,9 @@ const liste = Object.keys(MOTS)
 const REPONSES = {
   salut:
     "Bonjour ! Je suis Cap Web, un assistant à règles. Écrivez « aide » pour voir ce que je sais faire.",
-  aide: `Je connais « salut », « aide », « test », et deux mots à moi : ${liste}.`,
+  aide: `Je connais « salut », « aide », « test », et ${Object.keys(MOTS).length} mots à moi : ${liste}.`,
   test: "Test bien reçu : mes règles fonctionnent.",
+  repli: "Je ne connais pas encore cette phrase. Écrivez « aide » pour voir les mots que je connais.",
 };
 
 export function validateMessage(raw) {
@@ -54,7 +57,7 @@ export function replyTo(message) {
     return MOTS[texte];
   }
   // Message inconnu : on rappelle ce que Cap Web sait faire.
-  return "Je ne connais pas cette demande. Écrivez « aide » pour découvrir mes commandes.";
+  return REPONSES.repli;
 }
 
 export function synonyme(message) {

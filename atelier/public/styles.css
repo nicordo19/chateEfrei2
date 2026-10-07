@@ -101,6 +101,12 @@ button:hover {
   font-weight: 700;
 }
 
+#compteur {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #444444;
+}
+
 /* Bouton secondaire : effacer la conversation. */
 #effacer {
   margin-top: 0.5rem;
@@ -111,6 +117,39 @@ button:hover {
 
 #effacer:hover {
   background: #f2f3f5;
+}
+
+@media (max-width: 600px) {
+  #chat-form button {
+    width: 100%;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --fond: #121212;
+    --texte: #f1f1f1;
+    --accent: #8ab4ff;
+    --accent-fonce: #dfe9ff;
+    --bord: #dfe9ff;
+  }
+
+  #messages li.bot {
+    background: #1b2a47;
+  }
+
+  #effacer {
+    background: var(--fond);
+    color: var(--texte);
+  }
+
+  #effacer:hover {
+    background: #1d1d1d;
+  }
+
+  #compteur {
+    color: #dfe9ff;
+  }
 }
 
 footer {

@@ -51,6 +51,18 @@ export function createApp({ publicDir, version = 'dev' } = {}) {
       return;
     }
     // Métadonnée de version fournie au démarrage.
+    if (chemin === '/api/conseil') {
+      const conseils = [
+        'Commence par une tache simple pour avancer sans te perdre.',
+        'Teste rapidement ton interface sur mobile pour voir si tout reste lisible.',
+        'Prépare un message clair pour guider l’utilisateur et réduire les erreurs.'
+      ];
+      const conseil = conseils[Math.floor(Math.random() * conseils.length)];
+      const corps = JSON.stringify({ conseil });
+      res.writeHead(200, { 'content-type': 'application/json; charset=utf-8', 'content-length': Buffer.byteLength(corps) });
+      res.end(methode === 'HEAD' ? '' : corps);
+      return;
+    }
     if (chemin === '/version.json') {
       const corps = JSON.stringify({ version });
       res.writeHead(200, { 'content-type': 'application/json; charset=utf-8', 'content-length': Buffer.byteLength(corps) });
