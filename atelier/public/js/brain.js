@@ -22,7 +22,8 @@ const REPONSES = {
     "Bonjour ! Je suis Cap Web, un assistant à règles. Écrivez « aide » pour voir ce que je sais faire.",
   aide: `Je connais « salut », « aide », « test », et ${Object.keys(MOTS).length} mots à moi : ${liste}.`,
   test: "Test bien reçu : mes règles fonctionnent.",
-  repli: "Je ne connais pas encore cette phrase. Écrivez « aide » pour voir les mots que je connais.",
+  repli:
+    "Je ne connais pas encore cette phrase. Écrivez « aide » pour voir les mots que je connais.",
 };
 
 export function validateMessage(raw) {
